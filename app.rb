@@ -1,5 +1,7 @@
 require 'sinatra'
+require 'gyazo'
 
 get '/' do
-  'Hello world!'
+  client = Gyazo::Client.new
+  client.upload('prof.png')
 end
